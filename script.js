@@ -1,2 +1,6 @@
-const myVideo = document.getElementsByClassName('player__controls');
-myVideo.controls = false;
+const video = document.getElementById("myVideo");
+const play = document.getElementById("playButton");
+
+function playVideo() {
+  video.play();
+}
