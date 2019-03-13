@@ -29,7 +29,10 @@ function populateList(plates = [], platesList) {
 
 function toggleDone(e) {
   if(!e.target.matches('input')) return; // skip unless an input
-  console.log(e.target);
+  const el = e.target;
+  const index = el.dataset.index;
+  items[index].done = !items[index].done;
+  populateList(items, itemsList);
 }
 
 addItems.addEventListener('submit', addItem);
