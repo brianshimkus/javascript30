@@ -23,7 +23,7 @@ function paintToCanvas() {
   canvas.height = height;
   canvas.width = width;
 
-  setInterval(() => {
+  return setInterval(() => {
     ctx.drawImage(video, 0, 0, width, height);
   }, 16);
 }
@@ -35,10 +35,10 @@ function takePhoto() {
 
   // take the data out of the canvas
   const data = canvas.toDataURL('image/jpeg');
-  const link = document.createElement(`a`);
+  const link = document.createElement('a');
   link.href = data;
-  link.setAttribute('download', 'handsome');
-  link.textContent = 'Download Image';
+  link.setAttribute('download', 'photo');
+  link.innerHTML = `<img src="${data}" alt=Photo from app />`;
   strip.insertBefore(link, strip.firstChild);
 }
 
