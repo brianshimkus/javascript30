@@ -19,6 +19,13 @@ recognition.addEventListener('result', e => {
     p = document.createElement('p');
     words.appendChild(p);
   }
+  if (transcript.includes('sunny')) {
+    console.log('🌞');
+  } else if (transcript.includes('cloudy')) {
+    console.log('☁️');
+  } else if (transcript.includes('raining')) {
+    console.log('🌧️');
+  }
   console.log(transcript);
 });
 
