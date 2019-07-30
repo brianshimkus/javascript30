@@ -90,6 +90,14 @@ nav ul {
   opacity: 1;
 }
 
+.trigger-enter .dropdown {
+  display: block;
+}
+
+.trigger-enter-active .dropdown {
+  opacity: 1;
+}
+
 .dropdownBackground {
   width: 100px;
   height: 100px;
